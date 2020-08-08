@@ -51,8 +51,9 @@ export default function Home({ designers }) {
         <p className="f1 extend">
           <motion.span variants={item}>place to showcase</motion.span>{" "}
           <motion.span variants={item}>the work of talented</motion.span>{" "}
-          <motion.span variants={item}>Uruguayan designers to</motion.span>{" "}
-          <motion.span variants={item}>the world. The goal</motion.span>{" "}
+          <motion.span variants={item}>Uruguayan designers</motion.span>{" "}
+          <motion.span variants={item}>to the world.</motion.span>{" "}
+          <motion.span variants={item}>The goal</motion.span>{" "}
           <motion.span variants={item}>is to inspire new</motion.span>{" "}
           <motion.span variants={item}>designers to diversify</motion.span>{" "}
           <motion.span variants={item}>
