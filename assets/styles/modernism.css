@@ -152,7 +152,7 @@ a.link:before {
 }
 
 a.link:hover {
-  --color: #757575;
+  --color: #ffd400;
 }
 
 a.link:after {
