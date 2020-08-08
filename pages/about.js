@@ -51,12 +51,16 @@ export default function Home({ designers }) {
         <p className="f1 extend">
           <motion.span variants={item}>place to showcase</motion.span>{" "}
           <motion.span variants={item}>the work of talented</motion.span>{" "}
-          <motion.span variants={item}>Uruguayan designers</motion.span>{" "}
-          <motion.span variants={item}>to the world. The goal</motion.span>{" "}
+          <motion.span variants={item}>Uruguayan designers to</motion.span>{" "}
+          <motion.span variants={item}>the world. The goal</motion.span>{" "}
           <motion.span variants={item}>is to inspire new</motion.span>{" "}
           <motion.span variants={item}>designers to diversify</motion.span>{" "}
-          <motion.span variants={item}>their references, experienced designers</motion.span>{" "}
-          <motion.span variants={item}>to diversify their network, and companies to diversify their teams.</motion.span>
+          <motion.span variants={item}>
+            their references, experienced designers
+          </motion.span>{" "}
+          <motion.span variants={item}>
+            to diversity their network, and companies to diversify their teams.
+          </motion.span>
         </p>
       </motion.div>
 
@@ -80,10 +84,10 @@ export default function Home({ designers }) {
 
           <h3>Why are featuring artists as well?</h3>
           <p>
-            We wanted to showcase not only contemporary Uruguayan design, but
+            We wanted to showcase not only contemporary Brazilian design, but
             also leverage all the visibility that this project is getting to
             celebrate the history of design in our country. Every time you
-            reload the website there’s a new featured Uruguayan designer you can
+            reload the website there’s a new featured Brazilian designer you can
             learn more about.
           </p>
 
@@ -152,7 +156,7 @@ export default function Home({ designers }) {
 
           <h3>How did you build this?</h3>
           <p>
-            Uruguayans Who Design was built on top of the tech stack that{" "}
+            Brazilians Who Design was built on top of the tech stack that{" "}
             <a className="link" href="https://twitter.com/julesforrest">
               Jules Forrest
             </a>{" "}
