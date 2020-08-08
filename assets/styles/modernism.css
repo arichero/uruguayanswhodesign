@@ -56,7 +56,7 @@ table {
 table tbody td,
 table thead td {
   border: none;
-  border-bottom: 1px solid #363636;
+  border-bottom: 1px solid #ffffff;
 }
 
 table.large thead {
@@ -166,7 +166,7 @@ a.link:after {
 .sticky tr {
   position: fixed;
   width: 95vw;
-  background: #000;
+  background: #0366d6;
   padding: 1.5rem 0 1rem 0;
   display: table;
   top: -4rem;
