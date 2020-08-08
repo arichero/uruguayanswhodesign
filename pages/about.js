@@ -82,15 +82,6 @@ export default function Home({ designers }) {
             how they’re making an impact in the industry.
           </p>
 
-          <h3>Why are featuring artists as well?</h3>
-          <p>
-            We wanted to showcase not only contemporary Uruguayan design, but
-            also leverage all the visibility that this project is getting to
-            celebrate the history of design in our country. Every time you
-            reload the website there’s a new featured Uruguayan designer you can
-            learn more about.
-          </p>
-
           <h3>How did you come up with this idea?</h3>
           <p>
             We didn’t. This project is inspired by our fantastic sibling sites:
