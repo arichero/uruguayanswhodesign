@@ -90,7 +90,7 @@ export default function Home({ designers, filters }) {
       }}
     >
       <Head>
-        <title>Brazilians Who Design</title>
+        <title>Uruguayans Who Design</title>
         <link id="favicon" rel="alternate icon" href="/favicon.ico" />
         <MetaTags />
       </Head>
@@ -146,9 +146,9 @@ function Content({ designers, handleOpenFilter, className, onClick }) {
     <div className={className} onClick={onClick}>
       <Nav />
 
-      <Title className="title m0 p0" text="Brazilians*who&nbsp;design" />
+      <Title className="title m0 p0" text="Uruguayans*who&nbsp;design" />
       {/* <h1 className="title m0 p0">
-        Brazilians <br />
+        Uruguayans <br />
         who design
       </h1> */}
 
