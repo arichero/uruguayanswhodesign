@@ -27,7 +27,7 @@ export default function Home({ designers }) {
   return (
     <div className="container">
       <Head>
-        <title>Brazilians Who Design | About</title>
+        <title>Uruguayans Who Design | About</title>
         <link rel="icon" href="/favicon.ico" />
         <MetaTags />
       </Head>
@@ -38,7 +38,7 @@ export default function Home({ designers }) {
 
       <Title
         className="title m0 p0"
-        text="Brazilians*who&nbsp;design&nbsp;is&nbsp;a"
+        text="Uruguayans*who&nbsp;design&nbsp;is&nbsp;a"
         noAnimation
       />
 
@@ -51,7 +51,7 @@ export default function Home({ designers }) {
         <p className="f1 extend">
           <motion.span variants={item}>place to showcase</motion.span>{" "}
           <motion.span variants={item}>the work of talented</motion.span>{" "}
-          <motion.span variants={item}>Brazilian designers to</motion.span>{" "}
+          <motion.span variants={item}>Uruguayan designers to</motion.span>{" "}
           <motion.span variants={item}>the world. The goal</motion.span>{" "}
           <motion.span variants={item}>is to inspire new</motion.span>{" "}
           <motion.span variants={item}>designers to diversify</motion.span>{" "}
@@ -68,7 +68,7 @@ export default function Home({ designers }) {
         <div className="col-left">
           <h3>How can I nominate someone?</h3>
           <p>
-            If you know a Brazilian designer whose work or voice is valuable to
+            If you know a Uruguayan designer whose work or voice is valuable to
             the design industry, please{" "}
             <Link href="/nominate">
               <a className="link">fill out this form</a>
@@ -87,7 +87,7 @@ export default function Home({ designers }) {
             We wanted to showcase not only contemporary Brazilian design, but
             also leverage all the visibility that this project is getting to
             celebrate the history of design in our country. Every time you
-            reload the website there’s a new featured Brazilian designer you can
+            reload the website there’s a new featured Uruguayan designer you can
             learn more about.
           </p>
 
@@ -96,6 +96,11 @@ export default function Home({ designers }) {
             We didn’t. This project is inspired by our fantastic sibling sites:
           </p>
           <ul>
+            <li>
+              <a className="link" href="https://brazilianswho.design/">
+                Brazilians Who Design
+              </a>
+            </li>
             <li>
               <a className="link" href="https://womenwho.design/">
                 Women Who Design
@@ -151,7 +156,7 @@ export default function Home({ designers }) {
 
           <h3>How did you build this?</h3>
           <p>
-            Brazilians Who Design was built on top of the tech stack that{" "}
+            Uruguayans Who Design was built on top of the tech stack that{" "}
             <a className="link" href="https://twitter.com/julesforrest">
               Jules Forrest
             </a>{" "}
