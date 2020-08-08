@@ -59,7 +59,7 @@ export default function Home({ designers }) {
             their references, experienced designers
           </motion.span>{" "}
           <motion.span variants={item}>
-            to diversity their network, and companies to diversify their teams.
+            to diversify their network, and companies to diversify their teams.
           </motion.span>
         </p>
       </motion.div>
@@ -84,10 +84,10 @@ export default function Home({ designers }) {
 
           <h3>Why are featuring artists as well?</h3>
           <p>
-            We wanted to showcase not only contemporary Brazilian design, but
+            We wanted to showcase not only contemporary Uruguayan design, but
             also leverage all the visibility that this project is getting to
             celebrate the history of design in our country. Every time you
-            reload the website there’s a new featured Brazilian designer you can
+            reload the website there’s a new featured Uruguayan designer you can
             learn more about.
           </p>
 
@@ -156,7 +156,7 @@ export default function Home({ designers }) {
 
           <h3>How did you build this?</h3>
           <p>
-            Brazilians Who Design was built on top of the tech stack that{" "}
+            Uruguayans Who Design was built on top of the tech stack that{" "}
             <a className="link" href="https://twitter.com/julesforrest">
               Jules Forrest
             </a>{" "}
@@ -200,7 +200,7 @@ export default function Home({ designers }) {
           <p>
             If you’ve been added to the directory and would like to opt-out or
             make an edit to your profile, please send us a message at
-            ixda.montevideo@gmail.com.
+            hello@uxdesign.cc.
           </p>
           <h3>Why is my nomination taking so long to show?</h3>
           <p>
