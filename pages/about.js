@@ -171,26 +171,19 @@ export default function Home({ designers }) {
             >
               Women Who Design
             </a>
-            . Thanks to Caio Braga, Rafael Frota, Karina Sirqueira, Al Lucca,
-            Bruno Oyama, Fabio Sasso, Daniel Furtado, Rodrigo Muniz, Lucas
-            Falcão, for the help of gathering the initial list of designers.
+            . Thanks to Mauro Canziani and Gonzalo Vilar for the help of gathering the initial list of designers.
           </p>
 
           <h3>Who’s behind this?</h3>
           <ul>
             <li>
-              <a className="link" href="https://twitter.com/zehf">
-                Zeh Fernandes
+              <a className="link" href="https://medium.com/@arichero">
+                Andrés Richero
               </a>
             </li>
             <li>
-              <a className="link" href="http://twitter.com/fabriciot">
-                Fabricio Teixeira
-              </a>
-            </li>
-            <li>
-              <a className="link" href="http://uxdesign.cc/">
-                UX Collective
+              <a className="link" href="http://ixdamontevideo.com/">
+                IxDA Montevideo
               </a>
             </li>
           </ul>
