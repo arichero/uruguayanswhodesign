@@ -52,8 +52,7 @@ export default function Home({ designers }) {
           <motion.span variants={item}>place to showcase</motion.span>{" "}
           <motion.span variants={item}>the work of talented</motion.span>{" "}
           <motion.span variants={item}>Uruguayan designers</motion.span>{" "}
-          <motion.span variants={item}>to the world.</motion.span>{" "}
-          <motion.span variants={item}>The goal</motion.span>{" "}
+          <motion.span variants={item}>to the world. The goal</motion.span>{" "}
           <motion.span variants={item}>is to inspire new</motion.span>{" "}
           <motion.span variants={item}>designers to diversify</motion.span>{" "}
           <motion.span variants={item}>their references, experienced designers</motion.span>{" "}
