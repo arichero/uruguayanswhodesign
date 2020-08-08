@@ -146,7 +146,7 @@ a.link:before {
   position: absolute;
   background-size: 1px 1em;
   background-size: 1px 1em;
-  box-shadow: inset 0 -0.05em var(--color), inset 0 -0.1em #000;
+  box-shadow: inset 0 -0.05em var(--color), inset 0 -0.1em #007dff;
   transition: box-shadow 150ms ease;
   transform-origin: 0% 0%;
 }
