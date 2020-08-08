@@ -9,7 +9,7 @@ html {
 
 body {
   font-family: "Helvetica Now Display", "Helvetica Neue", "Helvetica";
-  background: #0366d6;
+  background: #007dff;
   color: #fff;
   font-weight: 500;
   margin: 0;
@@ -166,7 +166,7 @@ a.link:after {
 .sticky tr {
   position: fixed;
   width: 95vw;
-  background: #0366d6;
+  background: #007dff;
   padding: 1.5rem 0 1rem 0;
   display: table;
   top: -4rem;
