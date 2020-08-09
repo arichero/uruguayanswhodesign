@@ -73,7 +73,8 @@ table tbody tr {
 }
 
 table tbody tr:hover {
-  background: #ffd400;
+  background: #fff;
+  color: #007dff;
 }
 
 /* Rethink is the best aproch */
