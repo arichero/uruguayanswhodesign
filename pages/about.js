@@ -161,20 +161,13 @@ export default function Home({ designers }) {
               href="https://github.com/julesforrest/womenwhodesign"
             >
               Women Who Design
-            </a>
-            . Thanks to Mauro Canziani and Gonzalo Vilar for the help of gathering the initial list of designers.
-          </p>
+            </a>.</p>
 
           <h3>Who’s behind this?</h3>
           <ul>
             <li>
               <a className="link" href="https://medium.com/@arichero">
                 Andrés Richero
-              </a>
-            </li>
-            <li>
-              <a className="link" href="http://ixdamontevideo.com/">
-                IxDA Montevideo
               </a>
             </li>
           </ul>
