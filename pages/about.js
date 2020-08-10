@@ -185,8 +185,7 @@ export default function Home({ designers }) {
           <p>
             We update this website once a week to include new names. To ensure a
             healthy gender balance on this website, some nominations might take
-            longer to appear. In the meantime, try nominating a designer who
-            identifies as a woman or non-binary.
+            longer to appear.
           </p>
         </div>
 
