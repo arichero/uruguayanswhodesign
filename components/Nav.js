@@ -33,7 +33,7 @@ export default function Nav(props) {
         }
 
         ul li a:hover {
-          color: #757575;
+          color: #c7dcff;
         }
       `}</style>
     </ul>
