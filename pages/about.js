@@ -166,7 +166,7 @@ export default function Home({ designers }) {
           <h3>Who’s behind this?</h3>
           <ul>
             <li>
-              <a className="link" href="https://medium.com/@arichero">
+              <a className="link" href="https://www.linkedin.com/in/arichero/">
                 Andrés Richero
               </a>
             </li>
