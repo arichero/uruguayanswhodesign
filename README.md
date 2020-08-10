@@ -1,6 +1,6 @@
 # Uruguayans Who Design
 
-![](https://www.dropbox.com/s/x5udk39ad57ayp5/brazilianswhodesignthumb.png?raw=1)
+![](https://drive.google.com/file/d/1LjniUw2Y8dEazICxT81840IRUTFWw9Lv/view?usp=sharing)
 
 The website is built using Google Spreedsheet, [Next.js](https://nextjs.org/) and deployed at [Vercel](https://vercel.com/).
 
