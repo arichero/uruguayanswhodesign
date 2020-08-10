@@ -177,7 +177,7 @@ export default function Home({ designers }) {
           <p>
             If you’ve been added to the directory and would like to opt-out or
             make an edit to your profile, please send us a message at
-            ixda.montevideo@gmail.com.
+            <a href="mailto:arichero@gmail.com">arichero@gmail.com</a>.
           </p>
           <h3>Why is my nomination taking so long to show?</h3>
           <p>
