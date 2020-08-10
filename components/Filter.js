@@ -60,7 +60,7 @@ export default function Filter({
           max-width: 420px;
           background: #fff;
           min-height: 100vh;
-          color: #000;
+          color: #007dff;
           padding: 2.5rem;
           overflow-y: scroll;
         }
