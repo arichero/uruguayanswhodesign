@@ -19,7 +19,7 @@ export default function Nominate({ designers }) {
           height="100%"
           frameBorder="0"
           allow="camera; microphone; autoplay; encrypted-media;"
-          src="https://ixdamontevideo.typeform.com/to/DKSAOgSG"
+          src="https://arichero.typeform.com/to/Mz8Ssx9o"
         ></iframe>{" "}
         <script
           type="text/javascript"
