@@ -7,7 +7,7 @@ export default function MetaTags() {
       <meta name="title" content="Uruguayans Who Design" />
       <meta
         name="description"
-        content="A repository to celebrate the work of talented Brazilian designers and showcase it to the world."
+        content="A repository to celebrate the work of talented Uruguayan designers and showcase it to the world."
       />
 
       {/* <!-- Open Graph / Facebook --/> */}
