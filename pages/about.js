@@ -187,7 +187,7 @@ export default function Home({ designers }) {
           </p>
           <h3>Stay tuned</h3>
           <p>
-            More Uruguayan designers are being added to the repository. Revisit the
+            More designers are being added to the repository. Revisit the
             website every now and then and you might find a few more names and links.
           </p>
           <h3>Don´t be shy</h3>
