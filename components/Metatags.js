@@ -14,7 +14,7 @@ export default function MetaTags() {
       <meta property="og:type" content="website" />
       <meta property="og:url" content="http://uruguayanswho.design" />
       <meta property="og:title" content="Uruguayans Who Design" />
-      <meta
+      <meta name="description"
         property="og:description"
         content="A repository to celebrate the work of talented Uruguayan designers and showcase it to the world. Explore, discover and inspire."
       />
