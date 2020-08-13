@@ -20,7 +20,7 @@ export default function MetaTags() {
       />
       <meta name="image"
         property="og:image"
-        content="http://uruguayanswho.design/img/preview.png"
+        content="https://uruguayanswho.design/img/preview.png"
       />
 
       {/* <!-- Twitter --/> */}
@@ -33,7 +33,7 @@ export default function MetaTags() {
       />
       <meta
         property="twitter:image"
-        content="http://uruguayanswho.design/img/preview.png"
+        content="https://uruguayanswho.design/img/preview.png"
       />
     </>
   );
