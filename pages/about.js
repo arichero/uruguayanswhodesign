@@ -193,7 +193,7 @@ export default function Home({ designers }) {
           <h3>Don´t be shy</h3>
           <p>
             If you´re part of the list just share the link and you´ll tell the
-            world how proud you are of being part of this.
+            world how proud you are of being part of it.
           </p>
         </div>
 
