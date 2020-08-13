@@ -7,7 +7,7 @@ export default function MetaTags() {
       <meta name="title" content="Uruguayans Who Design" />
       <meta
         name="description"
-        content="A repository to celebrate the work of talented Uruguayan designers and showcase it to the world."
+        content="A repository to celebrate the work of talented Uruguayan designers and showcase it to the world. Explore, discover and inspire."
       />
 
       {/* <!-- Open Graph / Facebook --/> */}
@@ -16,7 +16,7 @@ export default function MetaTags() {
       <meta property="og:title" content="Uruguayans Who Design" />
       <meta
         property="og:description"
-        content="A repository to celebrate the work of talented Uruguayan designers and showcase it to the world."
+        content="A repository to celebrate the work of talented Uruguayan designers and showcase it to the world. Explore, discover and inspire."
       />
       <meta name="image"
         property="og:image"
@@ -29,7 +29,7 @@ export default function MetaTags() {
       <meta property="twitter:title" content="Uruguayans Who Design" />
       <meta
         property="twitter:description"
-        content="A repository to celebrate the work of talented Uruguayan designers and showcase it to the world."
+        content="A repository to celebrate the work of talented Uruguayan designers and showcase it to the world. Explore, discover and inspire."
       />
       <meta
         property="twitter:image"
