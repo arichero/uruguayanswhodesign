@@ -18,7 +18,7 @@ export default function MetaTags() {
         property="og:description"
         content="A repository to celebrate the work of talented Uruguayan designers and showcase it to the world."
       />
-      <meta
+      <meta name="image"
         property="og:image"
         content="http://uruguayanswho.design/img/preview.png"
       />
