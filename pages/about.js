@@ -185,6 +185,16 @@ export default function Home({ designers }) {
             healthy gender balance on this website, some nominations might take
             longer to appear.
           </p>
+          <h3>Stay tuned</h3>
+          <p>
+            More Uruguayan designers are being added to the repository. Revisit the
+            website every now and then and you might find a few more names and links.
+          </p>
+          <h3>Don´t be shy</h3>
+          <p>
+            If you´re part of the list just share the link and you´ll tell the
+            world how proud you are of being part of this.
+          </p>
         </div>
 
         <Analytics />
