@@ -90,16 +90,16 @@ function FilterItem({ label, active, onClick }) {
       <style jsx>{`
         .filterItem {
           cursor: pointer;
-          font-size: 1.6rem;
+          font-size: 1.5rem;
           display: flex;
           justify-content: space-between;
           align-items: center;
-          margin: 0.1rem 0;
+          margin: 0.2rem 0;
         }
 
         .check {
-          width: 1.7rem;
-          height: 1.7rem;
+          width: 1.5rem;
+          height: 1.5rem;
           /*background: #fff;
           border-radius: 6px; */
         }
