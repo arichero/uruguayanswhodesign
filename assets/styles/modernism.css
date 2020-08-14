@@ -9,7 +9,8 @@ html {
 
 body {
   font-family: "Helvetica Now Display", "Helvetica Neue", "Helvetica";
-  background: #007dff;
+  /*background: #007dff;*/
+  background: #1742E7;
   color: #fff;
   font-weight: 500;
   margin: 0;
@@ -74,7 +75,8 @@ table tbody tr {
 
 table tbody tr:hover {
   background: #fff;
-  color: #007dff;
+  /*color: #007dff;*/
+  color: #1742E7;
 }
 
 /* Rethink is the best aproch */
@@ -167,7 +169,8 @@ a.link:after {
 .sticky tr {
   position: fixed;
   width: 95vw;
-  background: #007dff;
+  /*background: #007dff;*/
+  background: #1742E7;
   padding: 1.5rem 0 1rem 0;
   display: table;
   top: -4rem;
