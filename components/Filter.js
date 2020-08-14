@@ -90,7 +90,7 @@ function FilterItem({ label, active, onClick }) {
       <style jsx>{`
         .filterItem {
           cursor: pointer;
-          font-size: 1.7rem;
+          font-size: 1.6rem;
           display: flex;
           justify-content: space-between;
           align-items: center;
