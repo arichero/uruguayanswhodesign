@@ -38,7 +38,8 @@ export default function Home({ designers, filters }) {
   const [filterList, setFilterList] = useState(filters);
 
   useEffect(() => {
-    setDesignersList(shuffle(designers).sort((a, b) => a.order - b.order));
+    /*setDesignersList(shuffle(designers).sort((a, b) => a.order - b.order));*/
+    setDesignersList(designers.sort((a, b) => a.order > b.order));
   }, []);
 
   // Filter
@@ -63,7 +64,8 @@ export default function Home({ designers, filters }) {
 
     setFilterList(newFilter);
     setDesignersList(
-      shuffle(designers).sort((a, b) => a.featured - b.featured)
+      /*shuffle(designers).sort((a, b) => a.featured - b.featured)*/
+      designers.sort((a, b) => a.featured > b.featured)
     );
   };
 
