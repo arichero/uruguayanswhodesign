@@ -18,8 +18,7 @@ export async function getStaticProps() {
   const designers = await res.json();
 
   let uniqueExpertise = new Set();
-  /*designers.map((d) => uniqueExpertise.add(d.expertise));*/
-  designers.map((d) => uniqueExpertise.add(d.name));
+  designers.map((d) => uniqueExpertise.add(d.expertise));
   let filters = Array.from(uniqueExpertise).map((e) => {
     return { label: e, active: false };
   });
