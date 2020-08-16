@@ -70,7 +70,7 @@ export default function Home({ designers, filters }) {
 
   const handleFilterClick = (indexof) => {
     filterList[indexof].active = filterList[indexof].active ? false : true;
-    setFilterList(filterList.sort((a, b) => a.order > b.order));
+    setFilterList(filters.sort((a, b) => a.order > b.order));
 
     let activeFilters = filterList
       .filter((d) => d.active == true)
