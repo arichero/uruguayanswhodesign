@@ -152,7 +152,9 @@ function Content({ designers, handleOpenFilter, className, onClick }) {
         Uruguayans <br />
         who design
       </h1> */}
-      {d.published}
+      {designers.map((d, i) => (
+                {d.publish}
+              ))}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
