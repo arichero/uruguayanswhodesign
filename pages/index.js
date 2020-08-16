@@ -38,7 +38,7 @@ export default function Home({ designers, filters }) {
   const [filterList, setFilterList] = useState(filters);
 
   useEffect(() => {
-    setDesignersList(shuffle(designers).sort((a, b) => a.order - b.order));
+    setDesignersList(shuffle(designers).sort((a, b) => a.order > b.order));
   }, []);
 
   // Filter
