@@ -70,7 +70,7 @@ export default function Home({ designers, filters }) {
 
   const handleFilterClick = (indexof) => {
     filterList[indexof].active = filterList[indexof].active ? false : true;
-    setFilterList(filters.sort((a, b) => a.order > b.order));
+    setFilterList(filterList);
 
     let activeFilters = filterList
       .filter((d) => d.active == true)
@@ -152,7 +152,7 @@ function Content({ designers, handleOpenFilter, className, onClick }) {
         Uruguayans <br />
         who design
       </h1> */}
-
+      {d.published}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
