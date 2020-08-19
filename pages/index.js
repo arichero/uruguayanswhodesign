@@ -149,10 +149,10 @@ function Content({ designers, handleOpenFilter, className, onClick }) {
 
       <Title className="title m0 p0" text="Uruguayans*who&nbsp;design" />
       {/* <h1 className="title m0 p0">
-        {d.published} Uruguayans <br />
+        Uruguayans <br />
         who design
       </h1> */}
-      
+      {designers != null ? ({designers.map((d, i) => ({d.published}))}) : null}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
