@@ -8,6 +8,10 @@ export default function Nominate({ designers }) {
     <div className="container">
       <Head>
         <title>Uruguayans Who Design | Nomiate</title>
+        <meta
+            name="description"
+            content="Feel free to nominate a Uruguayan designer you think the world should know about."
+          />
         <link rel="icon" href="/favicon.ico" />
         <MetaTags />
       </Head>
