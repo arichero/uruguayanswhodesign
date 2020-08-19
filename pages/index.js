@@ -91,7 +91,7 @@ export default function Home({ designers, filters }) {
       }}
     >
       <Head>
-        <title>Uruguayans Who Design</title>
+        <title>Uruguayans Who Design. A Uruguayan designers repository.</title>
         <link id="favicon" rel="alternate icon" href="/favicon.ico" />
         <MetaTags />
       </Head>
