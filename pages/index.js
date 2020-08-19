@@ -19,9 +19,21 @@ export async function getStaticProps() {
 
   let uniqueExpertise = new Set();
   designers.map((d) => uniqueExpertise.add(d.expertise));
-  let filters = Array.from(uniqueExpertise).map((e) => {
-    return { label: e, active: false };
+
+  let uniqueLocation = new Set();
+  designers.map((d) => uniqueLocation.add(d.location));
+
+  let expertises = Array.from(uniqueExpertise).map((e) => {
+    return { label: e, active: false, category: "expertise" };
   });
+
+  let locations = Array.from(uniqueLocation)
+    .sort()
+    .map((e) => {
+      return { label: e, active: false, category: "location" };
+    });
+
+  let filters = expertises.concat(locations);
 
   return {
     props: {
@@ -36,6 +48,7 @@ export default function Home({ designers, filters }) {
   const [designersList, setDesignersList] = useState(null);
   const [filterIsOpen, setFilterIsOpen] = useState(false);
   const [filterList, setFilterList] = useState(filters);
+  const [filterCategory, setFilterCategory] = useState(null);
 
   useEffect(() => {
     /*setDesignersList(shuffle(designers).sort((a, b) => a.order - b.order));*/
@@ -68,17 +81,38 @@ export default function Home({ designers, filters }) {
     );
   };
 
-  const handleFilterClick = (indexof) => {
+  const handleFilterClick = (item) => {
+    let indexof = filterList.indexOf(item);
     filterList[indexof].active = filterList[indexof].active ? false : true;
     setFilterList(filterList);
 
+    // Get Each column
+    let filterExpert = filterList
+      .filter((f) => f.category == "expertise")
+      .map((d) => d.label);
+    let filterLocation = filterList
+      .filter((f) => f.category == "location")
+      .map((d) => d.label);
+
+    // Find active
     let activeFilters = filterList
       .filter((d) => d.active == true)
       .map((d) => d.label);
 
+    // If none in that category check all
+    if (filterExpert.filter((f) => activeFilters.includes(f)).length <= 0)
+      activeFilters = activeFilters.concat(filterExpert);
+    if (filterLocation.filter((f) => activeFilters.includes(f)).length <= 0)
+      activeFilters = activeFilters.concat(filterLocation);
+
+    // Filter render list
     if (activeFilters.length > 0)
       setDesignersList(
-        designers.filter((d) => activeFilters.includes(d.expertise))
+        designers.filter(
+          (d) =>
+            activeFilters.includes(d.expertise) &&
+            activeFilters.includes(d.location)
+        )
       );
     else clearFilter();
   };
@@ -100,7 +134,7 @@ export default function Home({ designers, filters }) {
         <Content
           designers={designersList}
           handleOpenFilter={handleOpenFilter}
-          onClick={filterIsOpen ? handleCloseFilter : false}
+          onClick={filterIsOpen ? handleCloseFilter : undefined}
           className={filterIsOpen ? "filterIsOpen" : ""}
         />
       ) : null}
@@ -108,9 +142,10 @@ export default function Home({ designers, filters }) {
       <AnimatePresence>
         {filterIsOpen ? (
           <Filter
-            items={filterList}
+            items={filterList.filter((f) => f.category == filterCategory)}
             handleFilterClick={handleFilterClick}
             handleCloseFilter={handleCloseFilter}
+            categoryName={filterCategory}
           />
         ) : null}
       </AnimatePresence>
@@ -162,8 +197,24 @@ function Content({ designers, handleOpenFilter, className, onClick }) {
           <thead id="tableHeader" ref={tableHeaderRef}>
             <tr>
               <td>Name</td>
-              <td className="thsize-aux dn">Location</td>
-              <td className="thsize-aux filterTable" onClick={handleOpenFilter}>
+              <td
+                className="thsize-aux dn filterTable"
+                onClick={(e) => {
+                  handleOpenFilter("location");
+
+                  e.preventDefault();
+                }}
+              >
+                Location <FilterSVG />
+              </td>
+              <td
+                className="thsize-aux filterTable"
+                onClick={(e) => {
+                  handleOpenFilter("expertise");
+
+                  e.preventDefault();
+                }}
+              >
                 Expertise <FilterSVG />
               </td>
               <td className="thsize-link"></td>
@@ -187,30 +238,24 @@ function Content({ designers, handleOpenFilter, className, onClick }) {
         .tableContent {
           padding-top: 18vh;
         }
-
         .filterTable {
           cursor: pointer;
         }
-
         thead {
           height: 2.2rem;
         }
-
         .thsize-aux {
           width: 20%;
         }
-
         .thsize-link {
           width: 2rem;
           text-align: right;
         }
-
         @media (max-width: 480px) {
           .thsize-aux {
             width: 30%;
           }
         }
-
         tbody a {
           width: 100%;
           padding-bottom: 0.6em;
@@ -218,7 +263,6 @@ function Content({ designers, handleOpenFilter, className, onClick }) {
           color: inherit;
           display: inline-block;
         }
-
         table tbody td {
           padding-top: 0;
           padding-bottom: 0;
