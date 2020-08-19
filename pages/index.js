@@ -149,7 +149,7 @@ function Content({ designers, handleOpenFilter, className, onClick }) {
 
       <Title className="title m0 p0" text="Uruguayans*who&nbsp;design" />
       {/* <h1 className="title m0 p0">
-        Uruguayans <br />
+        {d.published} Uruguayans <br />
         who design
       </h1> */}
       
