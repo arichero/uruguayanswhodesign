@@ -27,7 +27,10 @@ export default function Home({ designers }) {
   return (
     <div className="container">
       <Head>
-        <title>Uruguayans Who Design | About</title>
+        <title>Uruguayans Who Design | About this initiative</title>
+        <meta name="description"
+        content="The goal is to inspire new designers to diversify their references, experienced designers to diversify their network, and companies to diversify their teams."
+        />
         <link rel="icon" href="/favicon.ico" />
         <MetaTags />
       </Head>
