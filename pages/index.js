@@ -232,24 +232,30 @@ function Content({ designers, handleOpenFilter, className, onClick }) {
         .tableContent {
           padding-top: 18vh;
         }
+
         .filterTable {
           cursor: pointer;
         }
+
         thead {
           height: 2.2rem;
         }
+
         .thsize-aux {
           width: 20%;
         }
+
         .thsize-link {
           width: 2rem;
           text-align: right;
         }
+
         @media (max-width: 480px) {
           .thsize-aux {
             width: 30%;
           }
         }
+
         tbody a {
           width: 100%;
           padding-bottom: 0.6em;
@@ -257,10 +263,12 @@ function Content({ designers, handleOpenFilter, className, onClick }) {
           color: inherit;
           display: inline-block;
         }
+
         table tbody td {
           padding-top: 0;
           padding-bottom: 0;
         }
+
       `}</style>
 
       <Analytics />
