@@ -1,9 +1,6 @@
 import Head from "next/head";
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Nav from "../components/Nav.js";import Head from "next/head";
-import { useState, useEffect, useRef } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import Nav from "../components/Nav.js";
 import Filter from "../components/Filter.js";
 import Title from "../components/Title.js";
@@ -22,21 +19,9 @@ export async function getStaticProps() {
 
   let uniqueExpertise = new Set();
   designers.map((d) => uniqueExpertise.add(d.expertise));
-
-  let uniqueLocation = new Set();
-  designers.map((d) => uniqueLocation.add(d.location));
-
-  let expertises = Array.from(uniqueExpertise).map((e) => {
-    return { label: e, active: false, category: "expertise" };
+  let filters = Array.from(uniqueExpertise).map((e) => {
+    return { label: e, active: false };
   });
-
-  let locations = Array.from(uniqueLocation)
-    .sort()
-    .map((e) => {
-      return { label: e, active: false, category: "location" };
-    });
-
-  let filters = expertises.concat(locations);
 
   return {
     props: {
@@ -51,10 +36,10 @@ export default function Home({ designers, filters }) {
   const [designersList, setDesignersList] = useState(null);
   const [filterIsOpen, setFilterIsOpen] = useState(false);
   const [filterList, setFilterList] = useState(filters);
-  const [filterCategory, setFilterCategory] = useState(null);
 
   useEffect(() => {
-    setDesignersList(shuffle(designers).sort((a, b) => a.order - b.order));
+    /*setDesignersList(shuffle(designers).sort((a, b) => a.order - b.order));*/
+    setDesignersList(designers.sort((a, b) => a.order > b.order));
   }, []);
 
   // Filter
@@ -66,9 +51,10 @@ export default function Home({ designers, filters }) {
     return false;
   };
 
-  const handleOpenFilter = (category) => {
-    setFilterCategory(category);
+  const handleOpenFilter = (e) => {
     setFilterIsOpen(true);
+
+    e.preventDefault();
   };
 
   const clearFilter = () => {
@@ -82,38 +68,17 @@ export default function Home({ designers, filters }) {
     );
   };
 
-  const handleFilterClick = (item) => {
-    let indexof = filterList.indexOf(item);
+  const handleFilterClick = (indexof) => {
     filterList[indexof].active = filterList[indexof].active ? false : true;
     setFilterList(filterList);
 
-    // Get Each column
-    let filterExpert = filterList
-      .filter((f) => f.category == "expertise")
-      .map((d) => d.label);
-    let filterLocation = filterList
-      .filter((f) => f.category == "location")
-      .map((d) => d.label);
-
-    // Find active
     let activeFilters = filterList
       .filter((d) => d.active == true)
       .map((d) => d.label);
 
-    // If none in that category check all
-    if (filterExpert.filter((f) => activeFilters.includes(f)).length <= 0)
-      activeFilters = activeFilters.concat(filterExpert);
-    if (filterLocation.filter((f) => activeFilters.includes(f)).length <= 0)
-      activeFilters = activeFilters.concat(filterLocation);
-
-    // Filter render list
     if (activeFilters.length > 0)
       setDesignersList(
-        designers.filter(
-          (d) =>
-            activeFilters.includes(d.expertise) &&
-            activeFilters.includes(d.location)
-        )
+        designers.filter((d) => activeFilters.includes(d.expertise))
       );
     else clearFilter();
   };
@@ -126,7 +91,7 @@ export default function Home({ designers, filters }) {
       }}
     >
       <Head>
-        <title>Uruguayans Who Design. A Uruguayan designers repository.</title>
+        <title>Uruguayans Who Design</title>
         <link id="favicon" rel="alternate icon" href="/favicon.ico" />
         <MetaTags />
       </Head>
@@ -135,7 +100,7 @@ export default function Home({ designers, filters }) {
         <Content
           designers={designersList}
           handleOpenFilter={handleOpenFilter}
-          onClick={filterIsOpen ? handleCloseFilter : undefined}
+          onClick={filterIsOpen ? handleCloseFilter : false}
           className={filterIsOpen ? "filterIsOpen" : ""}
         />
       ) : null}
@@ -143,10 +108,9 @@ export default function Home({ designers, filters }) {
       <AnimatePresence>
         {filterIsOpen ? (
           <Filter
-            items={filterList.filter((f) => f.category == filterCategory)}
+            items={filterList}
             handleFilterClick={handleFilterClick}
             handleCloseFilter={handleCloseFilter}
-            categoryName={filterCategory}
           />
         ) : null}
       </AnimatePresence>
@@ -184,7 +148,11 @@ function Content({ designers, handleOpenFilter, className, onClick }) {
       <Nav />
 
       <Title className="title m0 p0" text="Uruguayans*who&nbsp;design" />
-
+      {/* <h1 className="title m0 p0">
+        Uruguayans <br />
+        who design
+      </h1> */}
+      
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -194,24 +162,8 @@ function Content({ designers, handleOpenFilter, className, onClick }) {
           <thead id="tableHeader" ref={tableHeaderRef}>
             <tr>
               <td>Name</td>
-              <td
-                className="thsize-aux dn filterTable"
-                onClick={(e) => {
-                  handleOpenFilter("location");
-
-                  e.preventDefault();
-                }}
-              >
-                Location <FilterSVG />
-              </td>
-              <td
-                className="thsize-aux filterTable"
-                onClick={(e) => {
-                  handleOpenFilter("expertise");
-
-                  e.preventDefault();
-                }}
-              >
+              <td className="thsize-aux dn">Location</td>
+              <td className="thsize-aux filterTable" onClick={handleOpenFilter}>
                 Expertise <FilterSVG />
               </td>
               <td className="thsize-link"></td>
@@ -221,7 +173,7 @@ function Content({ designers, handleOpenFilter, className, onClick }) {
             <tbody>
               {designers.map((d, i) => (
                 <tr key={`${d.name}-${i}`}>
-                  <td><a href={d.link}>{d.name}</a></td>
+                  <td><a href={d.link} target="_blank" rel="noopener">{d.name}</a></td>
                   <td className="thsize-aux dn"><a href={d.link}>{d.location}</a></td>
                   <td className="thsize-aux"><a href={d.link}>{d.expertise}</a></td>
                   <td className="thsize-link"><a href={d.link}>→</a></td>
