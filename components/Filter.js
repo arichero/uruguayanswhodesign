@@ -64,7 +64,7 @@ export default function Filter({
           width: 100%;
           max-width: 420px;
           background: #fff;
-          color: #000;
+          color: #1742E7;
           padding: 2.5rem;
           min-height: 100vh;
         }
