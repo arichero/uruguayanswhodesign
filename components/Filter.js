@@ -17,7 +17,6 @@ export default function Filter({
   items,
   handleFilterClick,
   handleCloseFilter,
-  categoryName,
 }) {
   return (
     <motion.div
@@ -31,7 +30,6 @@ export default function Filter({
         right: 0,
         width: "100%",
         maxWidth: "420px",
-        overflowY: "scroll",
       }}
     >
       <div className="sidebar">
@@ -43,10 +41,7 @@ export default function Filter({
         >
           <CloseSVG />
         </a>
-        <h3>
-          {categoryName.charAt(0).charAt(0).toUpperCase() +
-            categoryName.slice(1)}
-        </h3>
+        <h3>Expertise</h3>
 
         {items.map((item, i) => (
           <FilterItem
@@ -54,7 +49,7 @@ export default function Filter({
             label={item.label}
             active={item.active}
             onClick={() => {
-              handleFilterClick(item);
+              handleFilterClick(i);
             }}
           />
         ))}
@@ -64,9 +59,10 @@ export default function Filter({
           width: 100%;
           max-width: 420px;
           background: #fff;
-          color: #000;
-          padding: 2.5rem;
           min-height: 100vh;
+          color: #007dff;
+          padding: 2.5rem;
+          overflow-y: scroll;
         }
         .close {
           display: block;
@@ -92,15 +88,15 @@ function FilterItem({ label, active, onClick }) {
       <style jsx>{`
         .filterItem {
           cursor: pointer;
-          font-size: 1.7rem;
+          font-size: 1.5rem;
           display: flex;
           justify-content: space-between;
           align-items: center;
-          margin: 0.1rem 0;
+          margin: 0.2rem 0;
         }
         .check {
-          width: 1.7rem;
-          height: 1.7rem;
+          width: 1.5rem;
+          height: 1.5rem;
           /*background: #fff;
           border-radius: 6px; */
         }
