@@ -67,6 +67,7 @@ export default function Filter({
           color: #1742E7;
           padding: 2.5rem;
           min-height: 100vh;
+          overflow-y: scroll;
         }
         .close {
           display: block;
