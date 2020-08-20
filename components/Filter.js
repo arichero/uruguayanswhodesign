@@ -32,7 +32,7 @@ export default function Filter({
         width: "100%",
         maxWidth: "420px",
         height: "100vh",
-        overflowY: "scroll",
+        overflow: "auto",
       }}
     >
       <div className="sidebar">
