@@ -2,7 +2,6 @@ import Head from "next/head";
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Nav from "../components/Nav.js";
-import Filter from "../components/Filter.js";
 import Title from "../components/Title.js";
 import MetaTags from "../components/Metatags.js";
 import Analytics from "../components/Analytics.js";
@@ -28,12 +27,9 @@ export async function getStaticProps() {
   };
 }
 
-export default function Home({ designers, filters }) {
+export default function Home({ designers }) {
   const [isReady, setIsReady] = useState(false);
   const [designersList, setDesignersList] = useState(null);
-  const [filterIsOpen, setFilterIsOpen] = useState(false);
-  const [filterList, setFilterList] = useState(filters);
-  const [filterCategory, setFilterCategory] = useState(null);
 
   useEffect(() => {
     setDesignersList(designers.sort((a, b) => a.order > b.order));
@@ -55,34 +51,14 @@ export default function Home({ designers, filters }) {
       {!isReady ? (
         <Content
           designers={designersList}
-          handleOpenFilter={handleOpenFilter}
-          onClick={filterIsOpen ? handleCloseFilter : undefined}
-          className={filterIsOpen ? "filterIsOpen" : ""}
         />
       ) : null}
 
-      <AnimatePresence>
-        {filterIsOpen ? (
-          <Filter
-            items={filterList.filter((f) => f.category == filterCategory)}
-            handleFilterClick={handleFilterClick}
-            handleCloseFilter={handleCloseFilter}
-            categoryName={filterCategory}
-          />
-        ) : null}
-      </AnimatePresence>
-
-      <style global jsx>{`
-        html,
-        body {
-          overflow: ${filterIsOpen ? "hidden" : "auto"};
-        }
-      `}</style>
     </div>
   );
 }
 
-function Content({ designers, handleOpenFilter, className, onClick }) {
+function Content({ designers, className, onClick }) {
   const tableHeaderRef = useRef();
 
   useEffect(() => {
