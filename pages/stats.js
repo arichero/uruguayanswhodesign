@@ -50,12 +50,6 @@ export default function Stats({ designers }) {
         />
       ) : null}
 
-      <style global jsx>{`
-        html,
-        body {
-          overflow: ${filterIsOpen ? "hidden" : "auto"};
-        }
-      `}</style>
     </div>
   );
 }
@@ -101,8 +95,8 @@ function Content({ designers, className, onClick }) {
             <tbody>
               {designers.map((d, i) => (
                 <tr key={`${d.name}-${i}`}>
-                  <td><a href={d.link} target="_blank" rel="noopener">{d.data}</a></td>
-                  <td className="thsize-loc dn"><a href={d.link}>{d.count}</a></td>
+                  <td>{d.data}</td>
+                  <td className="thsize-loc dn">{d.count}</td>
                 </tr>
               ))}
             </tbody>
