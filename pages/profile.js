@@ -8,7 +8,7 @@ import Analytics from "../components/Analytics.js";
 
 // TODO: Need to fetch `posts` (by calling some API endpoint)
 //       before this page can be pre-rendered.
-function Profile({ posts }) {
+function Profile({ designers }) {
   return (
     <ul>
       {designers.map((d) => (
