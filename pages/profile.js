@@ -11,7 +11,8 @@ import Analytics from "../components/Analytics.js";
 function Profile({ posts }) {
   return (
     <ul>
-      {posts.map((post) => (
+      {posts.m
+       ap((post) => (
         <li>{post.name}</li>
       ))}
     </ul>
@@ -26,8 +27,8 @@ export async function getServerSideProps({ params }) {
       : "https://uruguayanswho.design/";
   // params contains the post `id`.
   // If the route is like /posts/1, then params.id is 1
-  const res = await fetch(`https://.../posts/${params.slug}`)
-  const post = await res.json()
+  const res = await fetch(`https://.../profile/${params.slug}`)
+  const posts = await res.json()
 
   // Pass post data to the page via props
   return { props: { post } }
