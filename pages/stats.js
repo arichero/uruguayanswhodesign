@@ -14,16 +14,16 @@ export async function getStaticProps() {
       : "https://uruguayanswho.design/";
 
   const res = await fetch(`${origin}/api/designers`);
-  const designers = await res.json();
+  const stats = await res.json();
 
   return {
     props: {
-      designers,
+      stats,
     },
   };
 }
 
-export default function Stats({ designers }) {
+export default function Stats({ stats }) {
   const [isReady, setIsReady] = useState(false);
   const [designersList, setDesignersList] = useState(null);
 
@@ -91,9 +91,9 @@ function Content({ designers, className, onClick }) {
                 className="thsize-loc dn">Count</td>
             </tr>
           </thead>
-          {designers != null ? (
+          {stats != null ? (
             <tbody>
-              {designers.map((d, i) => (
+              {stats.map((d, i) => (
                 <tr key={`${d.name}-${i}`}>
                   <td>{d.data}</td>
                   <td className="thsize-loc dn">{d.count}</td>
