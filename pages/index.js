@@ -192,7 +192,7 @@ function Content({ designers, handleOpenFilter, className, onClick }) {
             <tr>
               <td>Name</td>
               <td
-                className="thsize-aux dn filterTable"
+                className="thsize-loc dn filterTable"
                 onClick={(e) => {
                   handleOpenFilter("location");
 
@@ -219,7 +219,7 @@ function Content({ designers, handleOpenFilter, className, onClick }) {
               {designers.map((d, i) => (
                 <tr key={`${d.name}-${i}`}>
                   <td><a href={d.link} target="_blank" rel="noopener">{d.name}</a></td>
-                  <td className="thsize-aux dn"><a href={d.link}>{d.location}</a></td>
+                  <td className="thsize-loc dn"><a href={d.link}>{d.location}</a></td>
                   <td className="thsize-aux"><a href={d.link}>{d.expertise}</a></td>
                   <td className="thsize-link"><a href={d.link}>→</a></td>
                 </tr>
@@ -241,8 +241,12 @@ function Content({ designers, handleOpenFilter, className, onClick }) {
           height: 2.2rem;
         }
 
+        .thsize-loc {
+          width: 15%;
+        }
+
         .thsize-aux {
-          width: 20%;
+          width: 25%;
         }
 
         .thsize-link {
