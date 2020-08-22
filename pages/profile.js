@@ -11,8 +11,7 @@ import Analytics from "../components/Analytics.js";
 function Profile({ posts }) {
   return (
     <ul>
-      {posts.m
-       ap((post) => (
+      {posts.map((post) => (
         <li>{post.name}</li>
       ))}
     </ul>
