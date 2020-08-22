@@ -22,10 +22,12 @@ export async function getStaticProps() {
 
   let uniqueLocation = new Set();
   designers.map((d) => uniqueLocation.add(d.location));
-
-  let expertises = Array.from(uniqueExpertise).map((e) => {
-    return { label: e, active: false, category: "expertise" };
-  });
+  
+  let expertises = Array.from(uniqueExpertise)
+    .sort()
+    .map((e) => {
+      return { label: e, active: false, category: "expertise" };
+    });
 
   let locations = Array.from(uniqueLocation)
     .sort()
