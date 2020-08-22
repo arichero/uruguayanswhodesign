@@ -28,7 +28,7 @@ export default function Stats({ designers }) {
   const [designersList, setDesignersList] = useState(null);
 
   useEffect(() => {
-    setDesignersList(designers.sort((a, b) => a.order > b.order));
+    setDesignersList(stats.sort((a, b) => a.order > b.order));
   }, []);
 
   return (
@@ -88,7 +88,7 @@ function Content({ designers, className, onClick }) {
             <tr>
               <td>Data</td>
               <td
-                className="thsize-loc dn">Data</td>
+                className="thsize-loc dn">Count</td>
             </tr>
           </thead>
           {designers != null ? (
