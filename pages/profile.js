@@ -8,28 +8,31 @@ import Analytics from "../components/Analytics.js";
 
 // TODO: Need to fetch `posts` (by calling some API endpoint)
 //       before this page can be pre-rendered.
-function Profile({ posts }) {
+function Profile({ designers }) {
   return (
     <ul>
-      {posts.map((post) => (
-        <li>{post.name}</li>
+      {designers.map((d) => (
+        <li>{d.name}</li>
       ))}
     </ul>
   )
 }
 
 // This function gets called at build time
-export async function getStaticPaths() {
-  // Call an external API endpoint to get posts
-  const res = await fetch('https://.../profile')
-  const posts = await res.json()
+export async function getStaticProps({ params }) {
+  const origin =
+    process.env.NODE_ENV !== "production"
+      ? "http://localhost:3000"
+      : "https://uruguayanswho.design/";
 
-  // Get the paths we want to pre-render based on posts
-  const paths = posts.map((post) => `/profile/${post.slug}`)
+  const res = await fetch(`${origin}/api/designers/${params.slug}`);
+  const designers = await res.json();
 
-  // We'll pre-render only these paths at build time.
-  // { fallback: false } means other routes should 404.
-  return { paths, fallback: false }
+  return {
+    props: {
+      designers,
+    },
+  };
 }
 
 export default Profile
