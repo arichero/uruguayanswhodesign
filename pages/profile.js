@@ -27,7 +27,7 @@ export async function getStaticProps() {
   const res = await fetch(`${origin}/api/designers`);
   const designers = await res.json();
   // Get the paths we want to pre-render based on posts
-  const paths = designers.map((post) => `/${post.id}`)
+  const paths = designers.map((post) => `/${d.slug}`)
   
   // We'll pre-render only these paths at build time.
   // { fallback: false } means other routes should 404.
@@ -44,7 +44,7 @@ export async function getStaticProps() {
 export async function getStaticProps({ params }) {
   // params contains the post `id`.
   // If the route is like /posts/1, then params.id is 1
-  const res = await fetch(`https://.../${params.id}`)
+  const res = await fetch(`https://.../${params.slug}`)
   const designers = await res.json()
 
   // Pass post data to the page via props
