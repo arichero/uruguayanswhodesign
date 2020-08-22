@@ -277,8 +277,7 @@ function Content({ designers, handleOpenFilter, className, onClick }) {
   );
 }
 
-/*function shuffle(array) {*/
-function array {
+function shuffle(array) {
   var m = array.length,
     temp,
     i;
