@@ -75,7 +75,8 @@ export default function Home({ designers, filters }) {
 
     setFilterList(newFilter);
     setDesignersList(
-      shuffle(designers).sort((a, b) => a.featured - b.featured)
+      /*shuffle(designers).sort((a, b) => a.featured - b.featured)*/
+      designers.sort((a, b) => a.order > b.order);
     );
   };
 
