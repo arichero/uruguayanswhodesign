@@ -18,28 +18,6 @@ function Profile({ posts }) {
   )
 }
 
-export async function getStaticProps() {
-  const origin =
-    process.env.NODE_ENV !== "production"
-      ? "http://localhost:3000"
-      : "https://uruguayanswho.design/";
-
-  const res = await fetch(`${origin}/api/designers`);
-  const designers = await res.json();
-  // Get the paths we want to pre-render based on posts
-  const paths = designers.map((post) => `/${d.slug}`)
-  
-  // We'll pre-render only these paths at build time.
-  // { fallback: false } means other routes should 404.
-  return { paths, fallback: false }
-
-  return {
-    props: {
-      designers,
-    },
-  };
-}
-
 // This also gets called at build time
 export async function getStaticProps({ params }) {
   // params contains the post `id`.
@@ -48,7 +26,11 @@ export async function getStaticProps({ params }) {
   const designers = await res.json()
 
   // Pass post data to the page via props
-  return { props: { d } }
+  return {
+    props: {
+      designers,
+    },
+  };
 }
 
 export default Profile
