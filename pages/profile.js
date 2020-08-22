@@ -36,7 +36,7 @@ export async function getStaticPaths() {
 }
 
 // This also gets called at build time
-export async function getStaticProps({ params }) {
+export async function getServerSideProps({ params }) {
   const origin =
     process.env.NODE_ENV !== "production"
       ? "http://localhost:3000"
