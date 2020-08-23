@@ -20,6 +20,7 @@ const Profile = () => {
         <MetaTags />
       </Head>
       <p>Profile: {slug}</p>
+      <p>Name: {d.name}</p>
       </div>
     );
 }
