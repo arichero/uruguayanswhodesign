@@ -12,6 +12,23 @@ const Profile = () => {
   const router = useRouter()
   const { slug } = router.query
 
+export async function getStaticProps() {
+  const origin =
+    process.env.NODE_ENV !== "production"
+      ? "http://localhost:3000"
+      : "https://uruguayanswho.design/";
+
+  const res = await fetch(`${origin}/api/designers`);
+  const designers = await res.json();
+  
+  return {
+    props: {
+      designers,
+    },
+  };
+}
+
+export default function Profile({ designers }) {
   return (
     <div className="container">
       <Head>
@@ -20,7 +37,11 @@ const Profile = () => {
         <MetaTags />
       </Head>
       <p>Profile: {slug}</p>
+      {designers != null ? (
+      {designers.map((d, { slug }) => (
       <p>Name: {d.name}</p>
+      ))}
+      ) : null}
       </div>
     );
 }
