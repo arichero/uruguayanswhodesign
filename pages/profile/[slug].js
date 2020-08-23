@@ -21,7 +21,7 @@ const Profile = () => {
       </Head>
       <p>Profile: {slug}</p>
       </div>
-    )
+    );
 }
 
 export default Profile
