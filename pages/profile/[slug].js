@@ -39,7 +39,7 @@ export default function Profile({ designers }) {
       </Head>
       <p>Profile: {slug}</p>
       {designers != null ? (
-      {designers.map((d, { slug }) => (
+      {designers.map((d, i) => (
       <p>Name: {d.name}</p>
       ))}
       ) : null}
