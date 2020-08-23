@@ -7,8 +7,8 @@ const Profile = ({ slug }) => (
 
 Profile.getInitialProps = async ({ query }) => {
   return { 
-    slug: query.slug;
-    name: query.name;
+    slug: query.slug,
+    name: query.name
   }
 }
 
