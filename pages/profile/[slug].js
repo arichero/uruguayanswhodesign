@@ -1,14 +1,10 @@
 import { useRouter } from 'next/router'
 
-const Comment = () => {
+const Post = () => {
   const router = useRouter()
-  const slug = router.query.slug || []
+  const { slug } = router.query
 
-  return (
-    <>
-      <h1>Slug: {slug.join('/')}</h1>
-    </>
-  )
+  return <p>Post: {slug}</p>
 }
 
-export default Comment
+export default Post
