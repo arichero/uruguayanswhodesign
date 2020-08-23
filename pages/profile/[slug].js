@@ -8,11 +8,20 @@ import MetaTags from "../../components/Metatags.js";
 import Analytics from "../../components/Analytics.js";
 import { useRouter } from 'next/router'
 
-const Slug = () => {
-  const router = useRouter()
-  const { slug } = router.query
-  }
+// posts will be populated at build time by getStaticProps()
+function Blog({ posts }) {
+  return (
+    <ul>
+      {designers.map((post) => (
+        <li>{designer.name}</li>
+      ))}
+    </ul>
+  )
+}
 
+// This function gets called at build time on server-side.
+// It won't be called on client-side, so you can even do
+// direct database queries. See the "Technical details" section.
 export async function getStaticProps() {
   const origin =
     process.env.NODE_ENV !== "production"
@@ -21,39 +30,14 @@ export async function getStaticProps() {
 
   const res = await fetch(`${origin}/api/designers`);
   const designers = await res.json();
-  
+
+  // By returning { props: posts }, the Blog component
+  // will receive `posts` as a prop at build time
   return {
     props: {
       designers,
     },
-  };
+  }
 }
 
-export default function Profile({ designers }) {
-  return (
-    <div className="container">
-      <Head>
-        <title>Uruguayans Who Design. A Uruguayan designers repository.</title>
-        <link id="favicon" rel="alternate icon" href="/favicon.ico" />
-        <MetaTags />
-      </Head>
-      <Nav />
-
-      <p>Profile: {slug}</p>
-      {designers != null ? (
-            <tbody>
-              {designers.map((d, i) => (
-                <tr key={`${d.name}-${i}`}>
-                  <td><a href={d.link} target="_blank" rel="noopener">{d.name}</a></td>
-                  <td className="thsize-loc dn"><a href={d.link}>{d.location}</a></td>
-                  <td className="thsize-aux"><a href={d.link}>{d.expertise}</a></td>
-                  <td className="thsize-link"><a href={d.link}>→</a></td>
-                </tr>
-              ))}
-            </tbody>
-          ) : null}
-      </div>
-    );
-}
-
-export default Profile
+export default Blog
