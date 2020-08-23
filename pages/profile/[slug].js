@@ -8,6 +8,15 @@ import MetaTags from "../../components/Metatags.js";
 import Analytics from "../../components/Analytics.js";
 import { useRouter } from 'next/router'
 
+const Post = () => {
+  const router = useRouter()
+  const { pid } = router.query
+
+  return <p>Post: {pid}</p>
+}
+
+export default Post
+
 // posts will be populated at build time by getStaticProps()
 function Blog({ posts }) {
   return (
