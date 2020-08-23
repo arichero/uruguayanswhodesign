@@ -5,7 +5,7 @@ const Profile = ({ slug }) => (
   </div>
 )
 
-Product.getInitialProps = async ({ query }) => {
+Profile.getInitialProps = async ({ query }) => {
   return { slug: query.slug }
 }
 
