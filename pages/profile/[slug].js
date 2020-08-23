@@ -9,4 +9,4 @@ Product.getInitialProps = async ({ query }) => {
   return { slug: query.slug }
 }
 
-export default Product
+export default Profile
