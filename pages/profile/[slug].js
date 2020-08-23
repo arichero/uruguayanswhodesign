@@ -8,11 +8,9 @@ const origin =
   const res = await fetch(`${origin}/api/designers`);
   const designers = await res.json();
 
-  // Pass data to the page via props
-  return { props: { designers } }
-}
-
 export default function Profile({ designers }) {
+    // Pass data to the page via props
+  return { props: { designers } }
   <div>
     <h1>{d.name}</h1>
     <p>Welcome to our product page for {d.slug}!</p>
