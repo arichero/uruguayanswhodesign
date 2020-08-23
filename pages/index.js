@@ -23,7 +23,7 @@ export async function getStaticProps() {
   let uniqueLocation = new Set();
   designers.map((d) => uniqueLocation.add(d.location));
   
-  let uniqueExpertise = new Set();
+  let uniqueStats = new Set();
   designers.map((d) => uniqueExpertise.add(d.stats));
   
   let expertises = Array.from(uniqueExpertise)
