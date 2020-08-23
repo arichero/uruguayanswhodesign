@@ -17,7 +17,7 @@ function Post({ post }) {
 export async function getStaticPaths() {
   return {
     // Only `/posts/1` and `/posts/2` are generated at build time
-    paths: [{ params: { id: '1' } }, { params: { id: '2' } }],
+    paths: [{ params: { slug: '1' } }, { params: { slug: '2' } }],
     // Enable statically generating additional pages
     // For example: `/posts/3`
     fallback: true,
@@ -28,7 +28,7 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   // params contains the post `id`.
   // If the route is like /posts/1, then params.id is 1
-  const res = await fetch(`https://.../posts/${params.id}`)
+  const res = await fetch(`https://.../profile/${params.slug}`)
   const post = await res.json()
 
   // Pass post data to the page via props
