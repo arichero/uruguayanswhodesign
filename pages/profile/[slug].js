@@ -37,12 +37,21 @@ export default function Profile({ designers }) {
         <link id="favicon" rel="alternate icon" href="/favicon.ico" />
         <MetaTags />
       </Head>
+      <Nav />
+
       <p>Profile: {slug}</p>
       {designers != null ? (
-      {designers.map((d, i) => (
-      <p>Name: {d.name}</p>
-      ))}
-      ) : null}
+            <tbody>
+              {designers.map((d, i) => (
+                <tr key={`${d.name}-${i}`}>
+                  <td><a href={d.link} target="_blank" rel="noopener">{d.name}</a></td>
+                  <td className="thsize-loc dn"><a href={d.link}>{d.location}</a></td>
+                  <td className="thsize-aux"><a href={d.link}>{d.expertise}</a></td>
+                  <td className="thsize-link"><a href={d.link}>→</a></td>
+                </tr>
+              ))}
+            </tbody>
+          ) : null}
       </div>
     );
 }
