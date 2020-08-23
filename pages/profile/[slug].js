@@ -17,7 +17,7 @@ function Post({ post }) {
 export async function getStaticPaths() {
   return {
     // Only `/posts/1` and `/posts/2` are generated at build time
-    paths: [{ params: { slug: '1' } }, { params: { slug: '2' } }],
+    paths: [{ params: { slug: 'adrine-kechichian' } }],
     // Enable statically generating additional pages
     // For example: `/posts/3`
     fallback: true,
