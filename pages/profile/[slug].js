@@ -15,8 +15,6 @@ const Post = () => {
   return <p>Post: {pid}</p>
 }
 
-export default Post
-
 // posts will be populated at build time by getStaticProps()
 function Blog({ posts }) {
   return (
