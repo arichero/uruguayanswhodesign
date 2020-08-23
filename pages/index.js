@@ -220,7 +220,8 @@ function Content({ designers, handleOpenFilter, className, onClick }) {
             <tbody>
               {designers.map((d, i) => (
                 <tr key={`${d.name}-${i}`}>
-                  <td><a href={d.link} target="_blank" rel="noopener">{d.name}</a></td>
+                  <td><Link href="/[slug]" as={`/${d.slug}`} target="_blank" rel="noopener"><a>{d.name}</a></Link></td>
+                  <!--<td><a href={d.link} target="_blank" rel="noopener">{d.name}</a></td>-->
                   <td className="thsize-loc dn"><a href={d.link}>{d.location}</a></td>
                   <td className="thsize-aux"><a href={d.link}>{d.expertise}</a></td>
                   <td className="thsize-link"><a href={d.link}>→</a></td>
