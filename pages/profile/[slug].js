@@ -11,6 +11,7 @@ import { useRouter } from 'next/router'
 const Profile = () => {
   const router = useRouter()
   const { slug } = router.query
+  }
 
 export async function getStaticProps() {
   const origin =
