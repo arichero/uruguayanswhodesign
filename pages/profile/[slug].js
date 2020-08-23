@@ -12,7 +12,16 @@ const Profile = () => {
   const router = useRouter()
   const { slug } = router.query
 
-  return <p>Profile: {slug}</p>
+  return (
+    <div className="container">
+      <Head>
+        <title>Uruguayans Who Design. A Uruguayan designers repository.</title>
+        <link id="favicon" rel="alternate icon" href="/favicon.ico" />
+        <MetaTags />
+      </Head>
+      <p>Profile: {slug}</p>
+      </div>
+    )
 }
 
 export default Profile
