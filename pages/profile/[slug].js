@@ -8,7 +8,7 @@ import MetaTags from "../../components/Metatags.js";
 import Analytics from "../../components/Analytics.js";
 import { useRouter } from 'next/router'
 
-const Profile = () => {
+const Slug = () => {
   const router = useRouter()
   const { slug } = router.query
   }
