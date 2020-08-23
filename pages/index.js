@@ -23,9 +23,6 @@ export async function getStaticProps() {
   let uniqueLocation = new Set();
   designers.map((d) => uniqueLocation.add(d.location));
   
-  let uniqueStats = new Set();
-  designers.map((d) => uniqueExpertise.add(d.stats));
-  
   let expertises = Array.from(uniqueExpertise)
     .sort()
     .map((e) => {
@@ -223,7 +220,7 @@ function Content({ designers, handleOpenFilter, className, onClick }) {
             <tbody>
               {designers.map((d, i) => (
                 <tr key={`${d.name}-${i}`}>
-                  <td><a href={d.link} target="_blank" rel="noopener">{d.name}{d.data}{d.count}</a></td>
+                  <td><a href={d.link} target="_blank" rel="noopener">{d.name}</a></td>
                   <td className="thsize-loc dn"><a href={d.link}>{d.location}</a></td>
                   <td className="thsize-aux"><a href={d.link}>{d.expertise}</a></td>
                   <td className="thsize-link"><a href={d.link}>→</a></td>
