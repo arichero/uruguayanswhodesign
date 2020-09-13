@@ -96,6 +96,16 @@ export default function Home({ designers }) {
               </a>
             </li>
             <li>
+              <a className="link" href="https://spaniardswho.design/">
+                Spaniards Who Design
+              </a>
+            </li>
+            <li>
+              <a className="link" href="https://britswho.design/">
+                Brits Who Design
+              </a>
+            </li>
+            <li>
               <a className="link" href="https://womenwho.design/">
                 Women Who Design
               </a>
@@ -150,21 +160,12 @@ export default function Home({ designers }) {
 
           <h3>How did you build this?</h3>
           <p>
-            Uruguayans Who Design was built on top of the tech stack that{" "}
-            <a className="link" href="https://twitter.com/julesforrest">
-              Jules Forrest
+            Uruguayans Who Design is built using the amazing{" "}
+            <a className="link" href="https://brazilianswho.design/">
+              open source Brazilians Who Design template
             </a>{" "}
-            kindly made available on{" "}
-            <a className="link" href="">
-              Github
-            </a>{" "}
-            after building{" "}
-            <a
-              className="link"
-              href="https://github.com/julesforrest/womenwhodesign"
-            >
-              Women Who Design
-            </a>.</p>
+            . Thanks to the many people behind the previous sites and to those who kindly supplied the code.
+          </p>
 
           <h3>Who’s behind this?</h3>
           <ul>
