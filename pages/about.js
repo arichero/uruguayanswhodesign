@@ -172,7 +172,7 @@ export default function Home({ designers }) {
             <li>
               <a className="link" href="https://www.linkedin.com/in/arichero/">
                 Andrés Richero
-              </a>
+              </a> and all of those amazing people who have kindly accepted to be part of it and shared their largely appreciated feedback to make it even better.
             </li>
           </ul>
         </div>
