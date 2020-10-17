@@ -91,73 +91,70 @@ export default function Home({ designers }) {
           </p>
           <ul>
             <li>
-              <a className="link" href="https://brazilianswho.design/">
+              <a className="link" href="https://brazilianswho.design/" target="_blank">
                 Brazilians Who Design
               </a>
             </li>
             <li>
-              <a className="link" href="https://spaniardswho.design/">
+              <a className="link" href="https://spaniardswho.design/" target="_blank">
                 Spaniards Who Design
               </a>
             </li>
             <li>
-              <a className="link" href="https://britswho.design/">
+              <a className="link" href="https://britswho.design/" target="_blank">
                 Brits Who Design
               </a>
             </li>
             <li>
-              <a className="link" href="https://italianswho.design/">
+              <a className="link" href="https://italianswho.design/" target="_blank">
                 Italians Who Design
               </a>
             </li>
             <li>
-              <a className="link" href="https://womenwho.design/">
+              <a className="link" href="https://womenwho.design/" target="_blank">
                 Women Who Design
               </a>
             </li>
             <li>
-              <a className="link" href="https://www.womenwhodraw.com/">
+              <a className="link" href="https://www.womenwhodraw.com/" target="_blank">
                 Women Who Draw
               </a>
             </li>
             <li>
-              <a className="link" href="http://www.28blacks.com/">
+              <a className="link" href="http://www.28blacks.com/" target="_blank">
                 28 Black Designers
               </a>
             </li>
             <li>
-              <a className="link" href="https://www.latinxswhodesign.com/">
+              <a className="link" href="https://www.latinxswhodesign.com/" target="_blank">
                 Latinx Who Design
               </a>
             </li>
             <li>
-              <a className="link" href="https://queerdesign.club/">
+              <a className="link" href="https://queerdesign.club/" target="_blank">
                 Queer Design Club
               </a>
             </li>
             <li>
-              <a
-                className="link"
-                href="https://filipinos-who-design.webflow.io/"
-              >
+              <a className="link" href="https://filipinos-who-design.webflow.io/" target="_blank">
                 Filipinos Who Design
               </a>
             </li>
             <li>
               <a
                 className="link"
-                href="https://filipinos-who-design.webflow.io/"
+                href="https://filipinos-who-design.webflow.io/" target="_blank"
               >
                 People Of Craft
               </a>
             </li>
             <li>
-              <a className="link" href="https://indianswhodesign.in/">
+              <a className="link" href="https://indianswhodesign.in/" target="_blank">
                 Indians Who Design
               </a>
             </li>
             <li>
-              <a className="link" href="https://www.apiwho.design/">
+              <a className="link" href="https://www.apiwho.design/" target="_blank">
                 Asian & Pacific Islanders Who Design
               </a>
             </li>
@@ -166,7 +163,7 @@ export default function Home({ designers }) {
           <h3>How did you build this?</h3>
           <p>
             Uruguayans Who Design is built using the amazing{" "}
-            <a className="link" href="https://brazilianswho.design/">
+            <a className="link" href="https://brazilianswho.design/" target="_blank">
               open source Brazilians Who Design template
             </a>{" "}
             . Thanks to the many people behind the previous sites and to those who kindly supplied the code.
@@ -175,7 +172,7 @@ export default function Home({ designers }) {
           <h3>Who’s behind this?</h3>
           <ul>
             <li>
-              <a className="link" href="https://www.linkedin.com/in/arichero/">
+              <a className="link" href="https://www.linkedin.com/in/arichero/" target="_blank">
                 Andrés Richero
               </a> and all the amazing people who have kindly accepted to be part of this and shared their largely appreciated feedback to make the initiative a better one.
             </li>
@@ -210,7 +207,7 @@ export default function Home({ designers }) {
           </p>
           <ul>
             <li>
-              <a className="link" href="https://uxdesign.cc/uruguayans-who-design-d2504d2d86e7">
+              <a className="link" href="https://uxdesign.cc/uruguayans-who-design-d2504d2d86e7" target="_blank">
                 UX Collective
               </a>
             </li>
