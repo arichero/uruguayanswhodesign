@@ -106,6 +106,11 @@ export default function Home({ designers }) {
               </a>
             </li>
             <li>
+              <a className="link" href="https://italianswho.design/">
+                Italians Who Design
+              </a>
+            </li>
+            <li>
               <a className="link" href="https://womenwho.design/">
                 Women Who Design
               </a>
@@ -199,6 +204,17 @@ export default function Home({ designers }) {
             If you´re part of the list just share the link and you´ll tell the
             world how proud you are of being part of it.
           </p>
+          <h3>Where can you read about us</h3>
+          <p>
+            You can find more information about us on this publications:
+          </p>
+          <ul>
+            <li>
+              <a className="link" href="https://uxdesign.cc/uruguayans-who-design-d2504d2d86e7">
+                UX Collective
+              </a>
+            </li>
+          </ul>
         </div>
 
         <Analytics />
