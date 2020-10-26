@@ -3,7 +3,7 @@ export default function Analytics() {
     <>
       <script
         async
-        src="https://www.googletagmanager.com/gtag/js?id=GTM-KXNJJVT"
+        src="https://www.googletagmanager.com/gtag/js?id=G-8RCBCZ2W7X"
       />
       <script
         dangerouslySetInnerHTML={{
@@ -14,7 +14,7 @@ export default function Analytics() {
             }
             gtag("js", new Date());
 
-            gtag("config", "UA-174993719-1");
+            gtag('config', 'G-8RCBCZ2W7X');
           `,
         }}
       />
