@@ -14,7 +14,7 @@ export default function Nav(props) {
         </Link>
       </li>
       <li>
-        <Link href="https://uruguayanswhodesign.slack.com/" target="_blank">
+        <Link href="https://uruguayanswhodesign.slack.com" target="_blank">
           <a>Slack</a>
         </Link>
       </li>
