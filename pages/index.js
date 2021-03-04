@@ -7,7 +7,6 @@ import Title from "../components/Title.js";
 import MetaTags from "../components/Metatags.js";
 import Analytics from "../components/Analytics.js";
 import FilterSVG from "../components/Icons/FilterSVG.js";
-import EmailSVG from "../components/Icons/EmailSVG.js";
 
 export async function getStaticProps() {
   const origin =
@@ -193,7 +192,6 @@ function Content({ designers, handleOpenFilter, className, onClick }) {
         <table className="large tableContent" cellSpacing="0">
           <thead id="tableHeader" ref={tableHeaderRef}>
             <tr>
-              <td></td>
               <td>Name</td>
               <td
                 className="thsize-loc dn filterTable"
@@ -222,7 +220,6 @@ function Content({ designers, handleOpenFilter, className, onClick }) {
             <tbody>
               {designers.map((d, i) => (
                 <tr key={`${d.name}-${i}`}>
-                  <td className="thsize-link"><a href='mailto:'.{d.email}><EmailSVG /></a></td>
                   <td><a href={d.link} target="_blank" rel="noopener">{d.name}</a></td>
                   <td className="thsize-loc dn"><a href={d.link} target="_blank" rel="noopener">{d.location}</a></td>
                   <td className="thsize-aux"><a href={d.link} target="_blank" rel="noopener">{d.expertise}</a></td>
