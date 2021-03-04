@@ -1,7 +1,7 @@
 export default function EmailSVG() {
   return (
     <svg
-      style={{ marginLeft: "0.4rem", display: "inline" }}
+      style={{ marginLeft: "0.4rem" }}
       width="32"
       height="32"
       fill="none"
