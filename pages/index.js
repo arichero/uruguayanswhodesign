@@ -276,6 +276,10 @@ function Content({ designers, handleOpenFilter, className, onClick }) {
           padding-bottom: 0;
         }
 
+        .EmailSVG {
+          display: inline-block;
+        }
+
       `}</style>
 
       <Analytics />
