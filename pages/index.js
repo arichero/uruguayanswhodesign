@@ -7,6 +7,7 @@ import Title from "../components/Title.js";
 import MetaTags from "../components/Metatags.js";
 import Analytics from "../components/Analytics.js";
 import FilterSVG from "../components/Icons/FilterSVG.js";
+import EmailSVG from "../components/Icons/EmailSVG.js";
 
 export async function getStaticProps() {
   const origin =
@@ -220,7 +221,7 @@ function Content({ designers, handleOpenFilter, className, onClick }) {
             <tbody>
               {designers.map((d, i) => (
                 <tr key={`${d.name}-${i}`}>
-                  <td><a href={d.link} target="_blank" rel="noopener">{d.name}</a></td>
+                  <td><a href=mailto:{d.email}><EmailSVG /></a><a href={d.link} target="_blank" rel="noopener">{d.name}</a></td>
                   <td className="thsize-loc dn"><a href={d.link} target="_blank" rel="noopener">{d.location}</a></td>
                   <td className="thsize-aux"><a href={d.link} target="_blank" rel="noopener">{d.expertise}</a></td>
                   <td className="thsize-link"><a href={d.link} target="_blank" rel="noopener">→</a></td>
