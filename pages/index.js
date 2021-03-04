@@ -277,7 +277,7 @@ function Content({ designers, handleOpenFilter, className, onClick }) {
         }
 
         .EmailSVG {
-          display: inline-block;
+          display: inline;
         }
 
       `}</style>
