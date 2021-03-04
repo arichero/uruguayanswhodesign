@@ -1,7 +1,6 @@
 export default function EmailSVG() {
   return (
-    <svg
-      style={{ marginLeft: "0.4rem" }}
+    <svg className="EmailSVG"
       width="32"
       height="32"
       fill="none"
